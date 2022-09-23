@@ -1,0 +1,23 @@
+{% extends 'padrao.html' %}
+<body>
+    <main>
+        <h1>Cadastro</h1>
+        {% block body %}
+            <form name="cad_user" method="post" action="/docad/">
+                {% csrf_token %}
+                <div class="form-group mt-4">Usuario: {{form.usuario}}</div>
+                <div class="form-group mt-4">Senha: {{form.senha}}</div>
+                <div class="form-group mt-4">Primerio Nome: {{form.nome}}</div>
+                <div class="form-group mt-4">Ultimo Nome: {{form.ultimo_nome}}</div>
+                <input type="submit" class="btn btn-success" value="Salvar">
+            </form>
+        {% endblock %}
+       
+        <div class="auth__after-footer">Já tem um cadastro? <a href="#">Entre agora</a></div>
+    </main>
+    <section class="images">
+        
+        <div class="circle"></div>
+    </section>
+</body>
+</html>
