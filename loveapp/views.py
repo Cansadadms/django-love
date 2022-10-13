@@ -25,7 +25,7 @@ def docad(request):
 		form.save()
 	return redirect('cadastro')
 
-def teste (request):
+def login (request):
 	tabela = Users.objects.all()
-	return render(request,'teste.html',{'usuario':tabela})
+	return render(request,'login.html',{'usuario':tabela})
 

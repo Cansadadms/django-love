@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+
+
+/* MENU */
+div.menu{
+    height: 90px;
+    align-items: center;
+    margin-bottom: 7%;
+}
+.cont-logo{
+    padding-top: 2%;
+}
+.cont-logo img {
+    max-width:200px;
+    max-height:43px;
+    width: auto;
+    height: auto;
+}
+div.menu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: right;
+}
+div.menu ul li {
+    display: inline;
+}
+div.menu ul li a {
+    padding: 12px 20px;
+    display: inline-block;
+    color: black;
+    text-decoration: none;
+    font-size: 20pt;
+    margin-top: -16px;
+}
+#dir:hover{
+    font-weight: bolder;
+}
+
+
+/* RODAPE */
+.container-linha{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 10%;
+}
+.linha{
+    background-color: black;
+    height: 3px;
+    width: 95%;
+}
+
+.container-rodape{
+    display: flex;
+    flex-direction: row;
+    margin-top: 3%;
+    justify-content: center;
+
+    text-align: left;
+}
+.rodape{
+    width: 90%;
+    font-size: 18pt;
+}
+#cad-sua-loja{
+    text-decoration: none;
+    color: black;
+}
+#cad-sua-loja:hover{
+    font-weight: bolder;
+}

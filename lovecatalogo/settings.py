@@ -76,12 +76,12 @@ WSGI_APPLICATION = 'lovecatalogo.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME':'catalogo',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': 'catalogo',
         'USER': 'root',
         'PASSWORD': 'Senai2019,',
         'HOST': 'localhost',
-        'PORT': '3306'
+        'PORT': '3306',
     }
 }
 

@@ -8,4 +8,4 @@ class UsersForm(ModelForm):
     class Meta:
         model = Users
         widgets = {'password': forms.PasswordInput(),}
-        fields = ['usuario', 'senha', 'nome', 'ultimo_nome']
+        fields = ['usuario', 'senha', 'nome', 'ultimo_nome'] #'cnpj', 'nome_loja', 'email']

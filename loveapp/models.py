@@ -7,3 +7,6 @@ class Users(models.Model):
     senha = models.CharField(max_length=16)
     nome = models.CharField(max_length=16)
     ultimo_nome = models.CharField(max_length=16)
+    #cnpj = models.CharField(max_length=16)
+    #nome_loja = models.CharField(max_length=16)
+    #email = models.CharField(max_length=16)
