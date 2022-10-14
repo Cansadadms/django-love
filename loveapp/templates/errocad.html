@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Erro</title>
+
+    <link rel="stylesheet" href="{% static 'css/sucessoerro.css' %}">
+
+    <meta http-equiv="refresh"
+        content="5; url = http://127.0.0.1:8000/cadastro/"/>
+</head>
+<body>
+
+    <main class="container">
+        <p>Algo no cadastro não está correto, por favor tente novamente</p>
+        <p class="red">Agurde enquanto te redirecionamos para a página de cadastro</p>
+        <img src="https://i.imgur.com/2COVuyC.png">
+    </main>
+    
+</body>
+</html>

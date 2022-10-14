@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    /* font-family: 'Abel', sans-serif; */
+}
+
+body {
+    background: linear-gradient(to top, #4776e6, #8e54e9);
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+}
+
+.container {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.red {
+    margin-top: 3rem;
+    font-size: 1.0rem;
+    color: whitesmoke;
+}
+
+.container img {
+    margin-top: 2rem;
+    max-height: 6vh;
+}

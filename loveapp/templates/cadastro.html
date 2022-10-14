@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Cadastro - MapShop</title>
-    <link rel="stylesheet" href="{% static 'css/menurodape.css' %}">
-    <link rel="stylesheet" href="{% static 'css/style_cadastro.css' %}">
+    
+    <link rel="stylesheet" href="{% static 'css/cadastro.css' %}">
 
     <!-- fontawesome -->
     <script src="https://kit.fontawesome.com/2f21a26946.js" crossorigin="anonymous"></script>
@@ -16,82 +16,49 @@
 </head>
 <body>
 
-    <!-- MENU -->
-    <nav>
-        <div class="menu">
-            <ul>
-                <div class="cont-logo">
-                    <a href="/home/"><img style="float:left" src="https://i.imgur.com/7B0Cahi.png"></a>
-                </div>
-                <!-- <li style="float:left"><a class="logo" href="index.html">MapShop</a></li> -->
-                <li><a href="#" id="dir">Sobre nós</a></li>
-                <li><a href="#" id="dir">Mapa</a></li>
-                <li><a href="#" id="dir">Lojas</a></li>
-                <i class="fa-solid fa-magnifying-glass"></i>
-            </ul>
-        </div>
-    </nav>
-
     <!-- FORMULARIO CADASTRO -->
-    <div class="limiter">
-		<div class="container-cadastro100">
-			<div class="wrap-cadastro100">
-				<form class="cadastro100-form validate-form">
-					<span class="cadastro100-form-title p-b-26">
-						Cadastro
-					</span>
+    <main class="container">
+        <h2>Cadastro</h2>
+        <form action="/docad/" method="post">
+            {% csrf_token %}
 
-					<div class="wrap-input100 validate-input" data-validate = "Valid email is: a@b.c">
-						<input class="input100" type="text" name="cadastro_user">
-						<span class="focus-input100" data-placeholder="Usuário"></span>
-					</div>
+            <div class="input-field">
+                {{form.usuario}}
+                <!-- <input type="text" name="username" id="username" placeholder="Usuário"> -->
+                <div class="underline"></div>
+            </div>
 
-					<div class="wrap-input100 validate-input" data-validate="Enter password">
-						<input class="input100" type="password" name="cadastro_senha">
-						<span class="focus-input100" data-placeholder="Senha"></span>
-					</div>
+            <div class="input-field">
+                {{form.senha}}
+                <!-- <input type="password" name="password" id="password" placeholder="Senha"> -->
+                <div class="underline"></div>
+            </div>
 
-                    <div class="wrap-input100 validate-input" data-validate="Enter password">
-						<input class="input100" type="text" name="cadastro_email">
-						<span class="focus-input100" data-placeholder="Email"></span>
-					</div>
+            <div class="input-field">
+                {{form.email}}
+                <div class="underline"></div>
+            </div>
 
-                    <div class="wrap-input100 validate-input" data-validate="Enter password">
-						<input class="input100" type="text" name="cadastro_nomeloja">
-						<span class="focus-input100" data-placeholder="Nome da loja"></span>
-					</div>
+            <div class="input-field">
+                {{form.nome_loja}}
+                <div class="underline"></div>
+            </div>
 
-                    <div class="wrap-input100 validate-input" data-validate="Enter password">
-						<input class="input100" type="text" name="cadastro_cnpj">
-						<span class="focus-input100" data-placeholder="CNPJ"></span>
-					</div>
+            <div class="input-field">
+                {{form.cnpj}}
+                <div class="underline"></div>
+            </div>
 
-					<div class="container-cadastro100-form-btn">
-						<div class="wrap-cadastro100-form-btn">
-							<div class="cadastro100-form-bgbtn"></div>
-							<button class="cadastro100-form-btn">
-								Cadastrar
-							</button>
-						</div>
-					</div>
+            <input type="submit" value="CADASTRAR">
+        </form>
 
-					<div class="alternar">
-						<span class="txt1">
-							Já possui cadastro?
-						</span>
-
-						<a class="txt2" href="/login/">
-							Entre
-						</a>
-					</div>
-				</form>
-			</div>
-		</div>
-	</div>
+        <div class="alternar">
+            <span>Já possui cadastro? 
+                <a href="/login/">Entre</a>
+            </span>
+        </div>
+    </main>
 
 
-
-    <script src="{% static 'jquery/jquery-3.2.1.min.js' %}"></script>
-    <script src="{% static 'js/main.js' %}"></script>
 </body>
 </html>

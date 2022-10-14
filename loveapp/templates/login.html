@@ -6,9 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Login - MaphShop</title>
-    <link rel="stylesheet" href="{% static 'css/menurodape.css' %}">
-    <link rel="stylesheet" href="{% static 'css/style_login.css' %}">
+    <title>Login - MapShop</title>
+    
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+    <!-- <link rel="javascript" href="js/main.js"> -->
 
     <!-- fontawesome -->
     <script src="https://kit.fontawesome.com/2f21a26946.js" crossorigin="anonymous"></script>
@@ -16,83 +17,32 @@
 </head>
 <body>
 
-    <!-- MENU -->
-    <nav>
-        <div class="menu">
-            <ul>
-                <div class="cont-logo">
-                    <a href="/home/"><img style="float:left" src="https://i.imgur.com/7B0Cahi.png"></a>
-                </div>
-                <!-- <li style="float:left"><a class="logo" href="index.html">MapShop</a></li> -->
-                <li><a href="#" id="dir">Sobre nós</a></li>
-                <li><a href="#" id="dir">Mapa</a></li>
-                <li><a href="#" id="dir">Lojas</a></li>
-                <i class="fa-solid fa-magnifying-glass"></i>
-            </ul>
-        </div>
-    </nav>
-
-
     <!-- FORMULARIO LOGIN -->
-    <div class="limiter">
-		<div class="container-login100">
-			<div class="wrap-login100">
-				<form class="login100-form validate-form">
-					<span class="login100-form-title p-b-26">
-						Login
-					</span>
+    <main class="container">
+        <h2>Login</h2>
+        <form action="" method="">
+            <!-- {% csrf_token %} -->
 
-					<div class="wrap-input100 validate-input" data-validate = "Valid email is: a@b.c">
-						<input class="input100" type="text" name="login_user">
-						<span class="focus-input100" data-placeholder="Usuário"></span>
-					</div>
+            <div class="input-field">
+                <input type="text" name="username" id="username" placeholder="Usuário">
+                <div class="underline"></div>
+            </div>
 
-					<div class="wrap-input100 validate-input" data-validate="Enter password">
-						<span class="btn-show-pass">
-							<i class="zmdi zmdi-eye"></i>
-						</span>
-						<input class="input100" type="password" name="login_pass">
-						<span class="focus-input100" data-placeholder="Senha"></span>
-					</div>
+            <div class="input-field">
+                <input type="password" name="password" id="password" placeholder="Senha">
+                <div class="underline"></div>
+            </div>
 
-					<div class="container-login100-form-btn">
-						<div class="wrap-login100-form-btn">
-							<div class="login100-form-bgbtn"></div>
-							<button class="login100-form-btn">
-								Entrar
-							</button>
-						</div>
-					</div>
+            <input type="submit" value="ENTRAR">
+        </form>
 
-					<div class="alternar">
-						<span class="txt1">
-							Não tem uma conta?
-						</span>
-
-						<a class="txt2" href="/cadastro/">
-							Cadastre-se
-						</a>
-					</div>
-				</form>
-			</div>
-		</div>
-	</div>
-    
-
-    <!-- RODAPE -->
-    <div class="container-linha"><div class="linha"></div></div>
-    
-    <div class="container-rodape">
-        <div class="rodape">
-                <div style="float:left">
-                    <a>Fale conosco: <br>mapshop@hotmail.com</a>
-                </div>
-                <div style="float:right">
-                    <a href="/cadastro/" id="cad-sua-loja">Cadastre sua loja</a>
-                </div>
+        <div class="alternar">
+            <span>Sua loja ainda não é cadastrada?
+                <a href="/cadastro/">Cadastre-a</a>
+            </span>
         </div>
-    </div>
-    <script src="{% static 'jquery/jquery-3.2.1.min.js' %}"></script>
-    <script src="{% static 'js/main.js' %}"></script>
+    </main>
+    
+
 </body>
 </html>

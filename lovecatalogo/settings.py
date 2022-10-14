@@ -76,7 +76,7 @@ WSGI_APPLICATION = 'lovecatalogo.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
         'NAME': 'catalogo',
         'USER': 'root',
         'PASSWORD': 'Senai2019,',
