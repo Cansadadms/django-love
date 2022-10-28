@@ -1,0 +1,58 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cadastro - MapShop</title>
+    
+    <link rel="stylesheet" href="{% static 'css/cadastro.css' %}">
+
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/2f21a26946.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    
+    <!-- FORMULARIO CADASTRO -->
+    <main class="container">
+        
+        <h2>Editar Perfil</h2>
+        <form action="/doupdate/" method="post">
+            {% csrf_token %}
+
+            <div class="input-field">
+                <span>Usuário</span>
+                {{perfil.usuario}}
+                <div class="underline"></div>
+            </div>
+
+            <div class="input-field">
+                <span>Email</span>
+                {{perfil.email}}
+                <div class="underline"></div>
+            </div>
+
+            <div class="input-field">
+                <span>Nome da Loja</span>
+                {{perfil.nomeloja}}
+                <div class="underline"></div>
+            </div>
+
+            <div class="input-field">
+                <span>CNPJ</span>
+                {{perfil.cnpj}}
+                <div class="underline"></div>
+            </div>
+
+            <input type="submit" value="SALVAR">
+        </form>
+
+    </main>
+    
+    <script src="{% static 'js/main.js' %}"></script>
+
+</body>
+</html>

@@ -8,41 +8,62 @@
 
     <title>Login - MapShop</title>
     
-    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+    <link rel="stylesheet" href="{% static 'css/formularios.css' %}">
     <!-- <link rel="javascript" href="js/main.js"> -->
 
     <!-- fontawesome -->
     <script src="https://kit.fontawesome.com/2f21a26946.js" crossorigin="anonymous"></script>
 
+    <style>
+        main.container {
+            min-height: 30vh;
+        }
+        main h2::before { /* linha abaixo do titulo */
+            content: '';
+            position: absolute;
+            height: 3px;
+            width: 25px;
+            bottom: 3px;
+            left: 0;
+            border-radius: 8px;
+            background: linear-gradient(to top, #642b73, #c6426e);
+        }
+    </style>
 </head>
 <body>
 
+    <a href="/home/"><i class="fa-solid fa-arrow-left" id="setinha"></i></a>
     <!-- FORMULARIO LOGIN -->
-    <main class="container">
-        <h2>Login</h2>
-        <form action="" method="">
-            <!-- {% csrf_token %} -->
+    <div class="bodyform">
+        <main class="container">
+            <h2>Login</h2>
+            <form name="log_user" action="/dologin/" method="POST">
+                {% csrf_token %}
 
-            <div class="input-field">
-                <input type="text" name="username" id="username" placeholder="Usuário">
-                <div class="underline"></div>
+                <div class="input-field">
+                    {{form.usuario}}
+                    <!-- <input type="text" name="username" id="username" placeholder="Usuário"> -->
+                    <div class="underline"></div>
+                </div>
+
+                <div class="input-field">
+                    {{form.senha}}
+                    <!-- <input type="password" name="password" id="password" placeholder="Senha"> -->
+                    <div class="underline"></div>
+                </div>
+
+                <input type="submit" value="ENTRAR">
+            </form>
+
+            <div class="alternar">
+                <span>Sua loja ainda não é cadastrada?
+                    <a href="/cadastro/">Cadastre-a</a>
+                </span>
             </div>
+        </main>
+    </div>
 
-            <div class="input-field">
-                <input type="password" name="password" id="password" placeholder="Senha">
-                <div class="underline"></div>
-            </div>
-
-            <input type="submit" value="ENTRAR">
-        </form>
-
-        <div class="alternar">
-            <span>Sua loja ainda não é cadastrada?
-                <a href="/cadastro/">Cadastre-a</a>
-            </span>
-        </div>
-    </main>
-    
+    <script src="{% static 'js/main.js' %}"></script>
 
 </body>
 </html>

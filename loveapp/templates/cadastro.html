@@ -8,57 +8,75 @@
 
     <title>Cadastro - MapShop</title>
     
-    <link rel="stylesheet" href="{% static 'css/cadastro.css' %}">
+    <link rel="stylesheet" href="{% static 'css/formularios.css' %}">
 
     <!-- fontawesome -->
     <script src="https://kit.fontawesome.com/2f21a26946.js" crossorigin="anonymous"></script>
 
+    <style>
+        main h2::before { /* linha abaixo do titulo */
+            content: '';
+            position: absolute;
+            height: 3px;
+            width: 117px;
+            bottom: 3px;
+            left: 0;
+            border-radius: 8px;
+            background: linear-gradient(to top, #642b73, #c6426e);
+        }
+    </style>
 </head>
 <body>
-
+    
+    <a href="/home/"><i class="fa-solid fa-arrow-left" id="setinha"></i></a>
     <!-- FORMULARIO CADASTRO -->
-    <main class="container">
-        <h2>Cadastro</h2>
-        <form action="/docad/" method="post">
-            {% csrf_token %}
+    <div class="bodyform">
+        <main class="container">
+            
+            <h2>Cadastro</h2>
+            <form action="/docad/" method="post">
+                {% csrf_token %}
 
-            <div class="input-field">
-                {{form.usuario}}
-                <!-- <input type="text" name="username" id="username" placeholder="Usuário"> -->
-                <div class="underline"></div>
+                <div class="input-field">
+                    {{form.usuario}}
+                    <!-- <input type="text" name="username" id="username" placeholder="Usuário"> -->
+                    <div class="underline"></div>
+                </div>
+
+                <div class="input-field">
+                    {{form.senha}}
+                    <!-- <input type="password" name="password" id="password" placeholder="Senha"> -->
+                    <div class="underline"></div>
+                </div>
+
+                <div class="input-field">
+                    {{form.email}}
+                    <div class="underline"></div>
+                </div>
+
+                <div class="input-field">
+                    {{form.nomeloja}}
+                    <div class="underline"></div>
+                </div>
+
+                <div class="input-field">
+                    {{form.cnpj}}
+                    <div class="underline"></div>
+                </div>
+
+                <input type="submit" value="CADASTRAR">
+            </form>
+
+            <div class="alternar">
+                <span>Já possui cadastro? 
+                    <a href="/login/">Entre</a>
+                </span>
             </div>
 
-            <div class="input-field">
-                {{form.senha}}
-                <!-- <input type="password" name="password" id="password" placeholder="Senha"> -->
-                <div class="underline"></div>
-            </div>
+        </main>
+    </div>
 
-            <div class="input-field">
-                {{form.email}}
-                <div class="underline"></div>
-            </div>
-
-            <div class="input-field">
-                {{form.nome_loja}}
-                <div class="underline"></div>
-            </div>
-
-            <div class="input-field">
-                {{form.cnpj}}
-                <div class="underline"></div>
-            </div>
-
-            <input type="submit" value="CADASTRAR">
-        </form>
-
-        <div class="alternar">
-            <span>Já possui cadastro? 
-                <a href="/login/">Entre</a>
-            </span>
-        </div>
-    </main>
-
+    <script src="{% static 'js/main.js' %}"></script>
 
 </body>
 </html>

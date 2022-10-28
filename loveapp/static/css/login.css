@@ -11,7 +11,7 @@
 }
 
 body {
-    background: linear-gradient(to top, #4776e6, #8e54e9);
+    background: linear-gradient(to left, #642b73, #c6426e);
     background-repeat: no-repeat;
     min-height: 100vh;
     min-width: 100vw;
@@ -43,7 +43,7 @@ main h2::before { /* linha abaixo do titulo */
     bottom: 3px;
     left: 0;
     border-radius: 8px;
-    background: linear-gradient(to top, #4776e6, #8e54e9);
+    background: linear-gradient(to top, #642b73, #c6426e);
 }
 
 form {
@@ -76,7 +76,7 @@ form .input-field{
     width: 100%;
     bottom: -5px;
     left: 0;
-    background: linear-gradient(to top, #4776e6, #8e54e9);
+    background: linear-gradient(to top, #642b73, #c6426e);
     transform: scaleX(0);
     transition: all .3s ease-in-out;
     transform-origin: left;
@@ -100,7 +100,7 @@ form .input-field{
 form input[type="submit"] {
     margin-top: 0.8rem;
     padding: 0.4rem;
-    background: linear-gradient(to left, #4776e6, #8e54e9);
+    background: linear-gradient(to left, #642b73, #c6426e);
     cursor: pointer;
     color: white;
     font-size: 0.9rem;
@@ -111,7 +111,7 @@ form input[type="submit"] {
 
 form input[type="submit"]:hover {
     letter-spacing: 0.5px;
-    background: linear-gradient(to right, #4776e6, #8e54e9);
+    background: linear-gradient(to right, #642b73, #c6426e);
 }
 
 .alternar {
@@ -128,11 +128,11 @@ form input[type="submit"]:hover {
 
 .alternar span a {
     text-decoration: none;
-    color: #8e54e9;
+    color: #c6426e;
     transition: 0.9s;
 }
 
 .alternar span a:hover {
-    color: #5722ac;
+    color: #642b73;
     transition: 0.9s;
 }

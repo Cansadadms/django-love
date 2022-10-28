@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MapShop</title>
+</head>
+<body>
+    <form name="Coment" method="post">
+        {% csrf_token %}
+        {{form.comentario}}
+        <input type="submit" value="Comentar">
+    </form>
+    <br>------------------------------------------</br>
+    Seus comentarios
+    {% if history %}
+        {% for c in history %}
+        <br>{{c.comentario}} -- {{c.usuario.usuario}} 
+         <a href="{% url 'edit_coment' c.id %}">[Edita]</a>
+        {% endfor %}
+    {% endif %}
+</body>
+</html>
